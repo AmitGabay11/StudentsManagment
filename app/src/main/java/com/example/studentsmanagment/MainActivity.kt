@@ -1,6 +1,9 @@
 package com.example.studentsmanagment
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,5 +23,12 @@ class MainActivity : AppCompatActivity() {
         //TODO: 1. Button to navigate to Add Student
         //TODO: 2. Create a button listener
         //TODO: 3. Create an intent
+
+
+        val addStudentButton: Button = findViewById(R.id.main_activity_add_student_button)
+        addStudentButton.setOnClickListener {
+            val intent = Intent(this , AddStudentActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
